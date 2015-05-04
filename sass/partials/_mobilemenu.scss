@@ -1,0 +1,25 @@
+// Specify how many menu items
+$menu-items: 6;
+
+.button-open {
+	display: block;
+}
+.navigational-menu {
+	.container {
+		width: 100%;
+	}
+	display: none;
+	ul {
+		width: 100%;
+		padding: 0;
+		li {
+			width: 100% / $menu-items;
+			margin: 0;
+			text-align: center;
+			background: whitesmoke;
+			a {
+				padding: 50px 0;
+			}
+		}
+	}
+}

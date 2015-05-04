@@ -1,0 +1,81 @@
+@import "compass";
+@import "compass/reset";
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*  #Default menu styling
+================================================== */
+
+.navigational-menu {
+	display: block;
+	ul {
+		padding: 2em 0 0 0;
+		float: right;
+		li {
+			margin-left: 30px;
+			float: left;
+			a {
+				text-decoration: none;
+				color: #000;
+				display: block;
+			}
+		}
+	}
+}
+
+/*  #Navigational button
+================================================== */
+
+.button-open {
+	display: none;
+	position: relative;
+	width: 45px;
+	height: 45px;
+	float: right;
+	margin: 20px 20px 0 0;
+	span, span:before, span:after {
+		width: 28px;
+		height: 3px;
+		position: absolute;
+		background: black;
+		left: 0;
+	}
+	span {
+		@include transition(background 0.2s 0.5s);
+		top: 21px;
+		left: 8px;
+		&:before {
+			@include transition(transform 0.2s 0.5s);
+			top: 8px;
+			content: '';
+		}
+		&:after {
+			@include transition(transform 0.2s 0.5s);
+			bottom: 8px;
+			content: '';
+		}
+	}
+}
+
+// The X button state
+.button-open.button-close {
+	span {
+		visibility: hidden;
+		background-color: rgba(255, 255, 255, 0);
+		&:before {
+			@include transform(translateY(-8px) rotate(45deg));
+			visibility: visible;
+		}
+		&:after {
+			@include transform(translateY(8px) rotate(-45deg));
+			visibility: visible;
+		}
+	}
+}
+
+@import "partials/mediaqueries";
