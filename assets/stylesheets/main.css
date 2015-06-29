@@ -160,6 +160,8 @@ html {
     width: 100%;
   }
 
+  /*  #Mobile responsive menu styling
+  ================================================== */
   .button-open {
     display: block;
   }
@@ -175,12 +177,12 @@ html {
     padding: 0;
   }
   .navigational-menu ul li {
-    width: 16.66667%;
+    width: 100%;
     margin: 0;
-    text-align: center;
-    background: whitesmoke;
   }
   .navigational-menu ul li a {
-    padding: 50px 0;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 1px solid #E8E8E8;
   }
 }
