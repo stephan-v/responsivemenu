@@ -1,0 +1,3 @@
+# Ignore the sass and sass cache directory.
+.sass-cache
+sass
