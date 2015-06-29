@@ -6,9 +6,9 @@
  */
 
 $(document).ready(function() {
-	$('.button-open').click(function() {
-		$('.navigational-menu').slideToggle();
-		$(this).toggleClass('button-close');
+	$('.navigation-toggle').click(function() {
+		$('.navigation-menu ul').slideToggle();
+		$(this).toggleClass('close');
 	});
 });
 
@@ -21,6 +21,6 @@ $(document).ready(function() {
 $(window).resize(function() {
 	var viewportWidth = $(window).width();
 	if(viewportWidth > 1100) {
-		$('.navigational-menu').show();
+		$('.navigation-menu ul').show();
 	}
 });

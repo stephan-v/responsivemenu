@@ -64,85 +64,23 @@ html {
 
 /*  #Default menu styling
 ================================================== */
-.navigational-menu {
-  display: block;
-}
-.navigational-menu ul {
+.navigation-menu ul {
   padding: 2em 0 0 0;
   float: right;
 }
-.navigational-menu ul li {
+.navigation-menu ul li {
   margin-left: 30px;
   float: left;
+  list-style-type: none;
 }
-.navigational-menu ul li a {
+.navigation-menu ul li a {
   text-decoration: none;
   color: #000;
   display: block;
 }
 
-/*  #Navigational button
-================================================== */
-.button-open {
+.navigation-toggle {
   display: none;
-  position: relative;
-  width: 45px;
-  height: 45px;
-  float: right;
-  margin: 20px 20px 0 0;
-}
-.button-open span, .button-open span:before, .button-open span:after {
-  width: 28px;
-  height: 3px;
-  position: absolute;
-  background: black;
-  left: 0;
-}
-.button-open span {
-  -moz-transition: background 0.2s 0.5s;
-  -o-transition: background 0.2s 0.5s;
-  -webkit-transition: background 0.2s;
-  -webkit-transition-delay: 0.5s;
-  transition: background 0.2s 0.5s;
-  top: 21px;
-  left: 8px;
-}
-.button-open span:before {
-  -moz-transition: -moz-transform 0.2s 0.5s;
-  -o-transition: -o-transform 0.2s 0.5s;
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition-delay: 0.5s;
-  transition: transform 0.2s 0.5s;
-  top: 8px;
-  content: '';
-}
-.button-open span:after {
-  -moz-transition: -moz-transform 0.2s 0.5s;
-  -o-transition: -o-transform 0.2s 0.5s;
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition-delay: 0.5s;
-  transition: transform 0.2s 0.5s;
-  bottom: 8px;
-  content: '';
-}
-
-.button-open.button-close span {
-  visibility: hidden;
-  background-color: rgba(255, 255, 255, 0);
-}
-.button-open.button-close span:before {
-  -moz-transform: translateY(-8px) rotate(45deg);
-  -ms-transform: translateY(-8px) rotate(45deg);
-  -webkit-transform: translateY(-8px) rotate(45deg);
-  transform: translateY(-8px) rotate(45deg);
-  visibility: visible;
-}
-.button-open.button-close span:after {
-  -moz-transform: translateY(8px) rotate(-45deg);
-  -ms-transform: translateY(8px) rotate(-45deg);
-  -webkit-transform: translateY(8px) rotate(-45deg);
-  transform: translateY(8px) rotate(-45deg);
-  visibility: visible;
 }
 
 .container {
@@ -162,27 +100,92 @@ html {
 
   /*  #Mobile responsive menu styling
   ================================================== */
-  .button-open {
-    display: block;
-  }
-
-  .navigational-menu {
-    display: none;
-  }
-  .navigational-menu .container {
+  .navigation-menu .container {
     width: 100%;
   }
-  .navigational-menu ul {
+  .navigation-menu ul {
+    display: none;
     width: 100%;
     padding: 0;
   }
-  .navigational-menu ul li {
+  .navigation-menu ul li {
     width: 100%;
     margin: 0;
   }
-  .navigational-menu ul li a {
+  .navigation-menu ul li:hover {
+    background: #E8E8E8;
+  }
+  .navigation-menu ul li a {
     text-align: center;
     padding: 1em 0;
     border-bottom: 1px solid #E8E8E8;
+  }
+
+  /*  #Responsive menu button styling
+  ================================================== */
+  .navigation-toggle {
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    float: right;
+    margin: 20px 20px 0 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  .navigation-toggle span, .navigation-toggle span:before, .navigation-toggle span:after {
+    width: 28px;
+    height: 3px;
+    position: absolute;
+    background: black;
+    left: 0;
+  }
+  .navigation-toggle span {
+    -moz-transition: background 0.2s 0.5s;
+    -o-transition: background 0.2s 0.5s;
+    -webkit-transition: background 0.2s;
+    -webkit-transition-delay: 0.5s;
+    transition: background 0.2s 0.5s;
+    top: 21px;
+    left: 8px;
+  }
+  .navigation-toggle span:before {
+    -moz-transition: -moz-transform 0.2s 0.5s;
+    -o-transition: -o-transform 0.2s 0.5s;
+    -webkit-transition: -webkit-transform 0.2s;
+    -webkit-transition-delay: 0.5s;
+    transition: transform 0.2s 0.5s;
+    top: 8px;
+    content: '';
+  }
+  .navigation-toggle span:after {
+    -moz-transition: -moz-transform 0.2s 0.5s;
+    -o-transition: -o-transform 0.2s 0.5s;
+    -webkit-transition: -webkit-transform 0.2s;
+    -webkit-transition-delay: 0.5s;
+    transition: transform 0.2s 0.5s;
+    bottom: 8px;
+    content: '';
+  }
+
+  .navigation-toggle.close span {
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .navigation-toggle.close span:before {
+    -moz-transform: translateY(-8px) rotate(45deg);
+    -ms-transform: translateY(-8px) rotate(45deg);
+    -webkit-transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
+    visibility: visible;
+  }
+  .navigation-toggle.close span:after {
+    -moz-transform: translateY(8px) rotate(-45deg);
+    -ms-transform: translateY(8px) rotate(-45deg);
+    -webkit-transform: translateY(8px) rotate(-45deg);
+    transform: translateY(8px) rotate(-45deg);
+    visibility: visible;
   }
 }
